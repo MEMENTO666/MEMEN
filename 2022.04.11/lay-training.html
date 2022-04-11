@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>card</title>
+  <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+   <style>
+      *{margin:0; padding:0; box-sizing: border-box;}
+        .container {
+          width:100vw;
+          height:100vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          
+        }  
+        
+        h1 {color: rgb(68, 66, 66);}
+        .main {
+          width:40vw;
+          height:90vh;
+          border: 1px solid rgb(99, 79, 79);
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }  
+        
+        .plus {
+          width:100%;
+          height:9vh;
+          /* border: 1px solid black; */
+          display: flex;
+          align-items: center;
+        }
+      
+        .plus div:nth-child(1)  {
+          width:50px;
+          height:50px;
+          /* border: 1px solid black; */
+          margin-left:20px;         
+          display: flex;
+          align-items: center;
+          justify-content: center; 
+          
+        }
+        
+        .text {
+          width:100%;
+          height:12vh;
+          /* border: 1px solid black; */
+          font-weight: bold;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          color: rgb(122, 117, 117);
+          justify-content: center;
+          
+        }
+
+        .dot {
+          width:100%;
+          height:5vh;
+          display: flex;
+          justify-content: end;
+          align-items: center;
+        }
+        
+        .dot div {
+          width:20px;
+          height:20px;
+          background-color: rgb(163, 154, 154);
+          margin:10px;
+          border-radius: 50%;
+        }
+        
+        .dot div:nth-child(1) {background-color: red;}
+        
+        .card {
+          width:95%;
+          height:25vh;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          /* justify-content: center; */
+          /* border: 1px solid red; */
+          border-radius: 20px;
+          overflow: hidden;
+          box-shadow: 2px 2px 2px 2px; 
+
+        }
+
+        .bold {
+          height:2vh;
+          width:100%;
+          background-color: darkgray;
+          display: flex;
+          justify-content: flex-end;
+          color: white;
+        }
+
+          .text2 {
+            width:100%;
+            height:7vh;
+            background-color: darkgray;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 25px; }
+          
+          .no1 {
+            width:100%;
+            height:17vh;
+            background-color: darkgray;
+            display: flex;
+            align-items: center;
+            
+          }
+        
+          .no1 div {
+            width:20vw;
+            height:15vh;
+            background-color: darkgray;
+            /* border: 1px solid black; */
+            margin:1px;
+            
+          }
+          .no1 div:nth-child(1) {
+            width:90%;
+            display: flex;
+            flex-direction: column;
+            justify-content:space-around;
+          }
+          
+          .no1 div:nth-child(1) div {
+            width:100%;
+            height:4vh;
+            background-color: darkgray;
+            margin:1px;
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+          }
+
+          .no2 {
+            display: flex;
+            flex-direction: column;
+            /* border: 1px solid black; */
+          }
+         
+          .no2 div {
+            width:12vw;
+            height:8vh;
+            /* border: 1px solid black; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+         
+          
+          .bottom {
+            width:95%;
+            height:35vh;
+            /* border: 1px solid red; */
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column; 
+            background-color: darkgray;
+            border-radius: 20px;
+          }
+          
+          .habit {
+            width:100%;
+            height:9vh;
+            /* border: 1px solid black; */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+        
+          .habit div {
+            width:95%;
+            height:3vh;
+            /* border: 1px solid black; */
+            font-weight: bold;
+          }
+          
+          .habit div:nth-child(2) {
+            border-radius: 20px;
+            height:2vh;
+            display: flex;
+            background-color: rgb(224, 218, 218);
+            align-items: center;
+
+          }
+
+          .habit div:nth-child(2) div {
+            width:20%;
+            height:100%;
+            background-color: rgb(49, 46, 46);
+            border-radius: 20px;
+          }
+          .habit div:nth-child(2) div:nth-child(2) {
+            width:15px;
+            height:15px;
+            background-color: white;
+            margin-left:80px;
+          }
+          
+          .habit div:nth-child(3) {
+            text-align: center;
+            margin-right: 10px;
+            color: white;
+            
+          }
+          .duo {
+            width:100%;
+            height:9vh;
+            /* border: 1px solid black; */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top:10px;
+          }
+        
+          .duo div {
+            width:95%;
+            height:3vh;
+            font-weight: bold;
+
+          }
+          .duo div:nth-child(2) {
+            border-radius: 20px;
+            height:2vh;
+            display: flex;
+            background-color:rgb(224, 218, 218);
+            align-items: center;
+          }
+          .duo div:nth-child(2) div {
+            width:30%;
+            height:100%;
+            background-color: rgb(66, 63, 63);
+            border-radius: 20px;
+          }
+          .duo div:nth-child(2) div:nth-child(2) {
+            width:15px;
+            height:15px;
+            background-color: white;
+            margin-left:80px;
+          }
+          
+          .duo div:nth-child(3) {
+            text-align: center;
+            margin-right: 10px;
+            margin-left:60px;
+            color: white;
+          }
+
+          .and {
+            width:100%;
+            height:9vh;
+            /* border: 1px solid black; */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top:10px;
+          }
+        
+          .and div {
+            width:95%;
+            height:3vh;
+            font-weight: bold;
+
+          }
+
+          .and div:nth-child(2) {
+            border-radius: 20px;
+            height:2vh;
+            display: flex;
+            background-color:rgb(224, 218, 218);
+            align-items: center;
+          }
+          .and div:nth-child(2) div {
+            width:50%;
+            height:100%;
+            background-color: rgb(70, 69, 69);
+            border-radius: 20px;
+          }
+          .and div:nth-child(2) div:nth-child(2) {
+            width:15px;
+            height:15px;
+            background-color: white;
+            margin-left:80px;
+          }
+          
+          .and div:nth-child(3) {
+            text-align: center;
+            margin-right: 10px;
+            margin-left:60px;
+            margin-left: 200px;
+            color: white;
+          }
+
+
+
+          .more {
+            width:100%;
+            height:3vh;
+            /* border: 1px solid red; */
+            margin-top: 10px;
+          }
+          .more div {
+            width:80px;
+            height:25px;
+            background-color: rgb(87, 86, 86);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 20px;
+            font-weight: bold;
+            color: white;
+          }
+          
+          
+    </style>
+</head>
+<body>
+  <div class="container">
+    <div class="main">
+      <div class="plus">
+        <div><span class="iconify" data-icon="akar-icons:plus" style="font-size: 50px;"></span></div>
+      </div>
+        <div class="text">
+          <h2>CARD management</h2>
+            <p>user Money by for User</p>
+        </div>  
+          <div class="dot">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+            <div class="card">
+              <div class="bold">Bold card +</div>
+              <div class="text2">
+                <h1>YOUR CARD</h1>
+              </div>
+              <div class="no1">
+                <div>
+                  <div>0000&nbsp;&nbsp; 1111&nbsp;&nbsp; 3333&nbsp;&nbsp; 2222</div>
+                  <div>Bold card &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;09/28</div>
+                  <div>Bruce &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Lee</div>
+                </div>
+                        <!-- 왼쪽 디비전, 숫자 기입장소 -->
+                <div class="no2">
+                  <div><span class="iconify" data-icon="flat-color-icons:sim-card-chip" style="font-size: 60px;"></span></div>
+                  <div><span class="iconify" data-icon="brandico:visa" style="font-size: 70px;"></span></div>
+                </div>
+            </div>
+        
+    </div>
+      
+    
+    <div class="bottom">
+      <div class="habit">
+        <div><p>Good habit &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;999,888,444,555</p></div>
+        <div>
+          <div></div>
+          <div></div>
+        </div>
+        <div>45%</div>
+      </div>
+      
+      <div class="duo">
+        <div>Duolino &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;222,333,555</div>
+        <div>
+          <div></div>
+          <div></div>
+        </div>
+        <div>70%</div>
+      </div>
+
+      <div class="and">
+        <div>Android &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;444,666,555</div>
+        <div>
+          <div></div>
+          <div></div>
+        </div>
+        <div>85%</div>
+      </div>
+      
+        <div class="more">
+          <div><p>MORE</p></div>
+        </div>
+      </div>
+  </div>
+  
+</body>
+</html>
