@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>backdrop-filter</title>
+    <style>
+      .container {
+        width:100vw;
+        height:100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background:url(./rain.png);
+        background-size: cover;
+      }  
+      
+      .container div {
+        width:50%;
+        height:50%;
+        /* border: 1px solid black; */
+        backdrop-filter: blur(40px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* background-color: white; */
+        /* backdrop-filter: grayscale(0.7); */
+        /* backdrop-filter: invert(0.8); */
+        border-radius: 40%;
+        color: rgb(184, 166, 166);
+        font-family: impact;
+
+      }
+      
+      
+    
+      
+      
+      
+    </style>
+</head>
+<body>
+  <div class="container">
+    <div><h1>비가온드아아</h1></div>
+  </div>
+  
+</body>
+</html>
