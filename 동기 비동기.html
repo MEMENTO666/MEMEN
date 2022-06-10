@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>training-4</title>
+</head>
+
+<body>
+  <script>
+
+    // Promise 사용한 이 함수는 차후에 분석하고
+    // 이 함수가 비동기(async)로 구현된 함수라는 것에만 집중
+    async function lazyConsoleLog (number, timeoutMs) {
+      return new Promise(resolve => {
+        setTimeout(() => {
+          console.log(number);
+          resolve();
+        }, timeoutMs);
+      });
+    }
+
+    
+    async function 예제실행기 (mode) {
+      // lazyConsoleLog는 비동기(async) 함수
+      // 1. 비동기 함수를 있는 그대로(비동기식으로) 호출
+      if(mode === 1) {
+        console.log(1);
+        console.log(2);
+        console.log(3);
+        
+        lazyConsoleLog(4, 1000); // 이 함수는 1초 뒤 실행됨, 이 함수가 안끝나도 코드 실행은 밑으로 쭉 진행됨
+        lazyConsoleLog(5, 700); // 이 함수는 0.7초 뒤 실행됨, 이 함수가 안끝나도 코드 실행은 밑으로 쭉 진행됨
+        
+        console.log(6);
+        console.log(7);
+        console.log(8);
+        // 실행 순서
+        // 1 2 3 6 7 8   5 4
+      }
+    
+    //   //***************************************************************
+
+      // 2. 비동기 함수를 동기식으로 호출
+      if(mode === 2) {
+        console.log(1);
+        console.log(2);
+        console.log(3);
+      
+        await lazyConsoleLog(4, 1000); // 1초 뒤 실행, 그러나 1초 뒤 실행되는 이 함수가 끝날때 까지 여기서 기다림
+        await lazyConsoleLog(5, 500); // 0.5초 뒤 실행, 그러나 0.5초 뒤 실행되는 이 함수가 끝날때 까지 여기서 기다림
+      
+        console.log(6);
+        console.log(7);
+        console.log(8);
+        // 실행 순서 
+        // 1 2 3 4 5 6 7 8
+      }
+    }
+
+
+    
+    // 1, 2로 값 바꿔가며 위 예제 구동할 것
+    예제실행기( 1 );
+
+
+  </script>
+</body>
+
+</html>
